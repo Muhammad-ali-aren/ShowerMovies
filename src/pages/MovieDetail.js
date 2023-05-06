@@ -10,7 +10,7 @@ export const MovieDetail = () => {
   useEffect(() => {
     async function fetchMovieDetails() {
       const respons = await fetch(
-        `https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.REACT_APP_API_KEY}`
+        `https://api.themoviedb.org/3/movie/${movieId}?api_key=fd3abfce8b8e717df47c31bdfa643884`
       );
       const respData = await respons.json();
       setMovie(respData);
@@ -20,6 +20,7 @@ export const MovieDetail = () => {
   useEffect(() => {
     document.title = `${movie.title} / ShowerMovies`;
   });
+  console.log(movie);
   return (
     <main>
       <section className="flex justify-around flex-wrap py-5">
